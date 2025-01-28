@@ -25,7 +25,7 @@ namespace WindowsFormsApp1
     {
         public bool HasBone { get; set; }
 
-        public override string MakeSound() { return "Bark"; }
+        //public override string MakeSound() { return "Bark"; }
     }
 
     class Cat : Animal

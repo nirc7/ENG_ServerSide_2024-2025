@@ -8,6 +8,7 @@ namespace WindowsFormsApp1
 {
     internal class Person
     {
+        public static int counter = 0;    
         int id;
         public int Id
         {
@@ -31,10 +32,11 @@ namespace WindowsFormsApp1
         {
             Id = 1;
             Name = "no name";
+            counter++; 
         }
 
         public virtual string Show()
-        {
+        {id
             return $"{Id}, {Name}";
         }
     }
