@@ -36,7 +36,7 @@ namespace SQLDBDemo
 
         private void btnSelect_Click(object sender, EventArgs e)
         {
-            string conStr = "Data Source=LAB-G700;Initial Catalog=DBUsers;User ID=sa;Password=RuppinTech!;";
+            string conStr = "Data Source=LAB-G700;Initial Catalog=DBUsers;User ID=sa;Password=*****;";
             SqlConnection con = new SqlConnection(conStr);
             SqlCommand cmd = new SqlCommand(
                 " SELECT *  " +
