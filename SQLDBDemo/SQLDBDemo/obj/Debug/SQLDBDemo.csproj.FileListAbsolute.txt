@@ -8,3 +8,13 @@ C:\Users\Lab-G700\Desktop\year2 react course\ENG_ServerSide_2024-2025\SQLDBDemo\
 C:\Users\Lab-G700\Desktop\year2 react course\ENG_ServerSide_2024-2025\SQLDBDemo\SQLDBDemo\obj\Debug\SQLDBDemo.csproj.CoreCompileInputs.cache
 C:\Users\Lab-G700\Desktop\year2 react course\ENG_ServerSide_2024-2025\SQLDBDemo\SQLDBDemo\obj\Debug\SQLDBDemo.exe
 C:\Users\Lab-G700\Desktop\year2 react course\ENG_ServerSide_2024-2025\SQLDBDemo\SQLDBDemo\obj\Debug\SQLDBDemo.pdb
+C:\Users\Lab-G700\Desktop\ENG_ServerSide_2024-2025\SQLDBDemo\SQLDBDemo\bin\Debug\SQLDBDemo.exe.config
+C:\Users\Lab-G700\Desktop\ENG_ServerSide_2024-2025\SQLDBDemo\SQLDBDemo\bin\Debug\SQLDBDemo.exe
+C:\Users\Lab-G700\Desktop\ENG_ServerSide_2024-2025\SQLDBDemo\SQLDBDemo\bin\Debug\SQLDBDemo.pdb
+C:\Users\Lab-G700\Desktop\ENG_ServerSide_2024-2025\SQLDBDemo\SQLDBDemo\obj\Debug\SQLDBDemo.csproj.AssemblyReference.cache
+C:\Users\Lab-G700\Desktop\ENG_ServerSide_2024-2025\SQLDBDemo\SQLDBDemo\obj\Debug\SQLDBDemo.Form1.resources
+C:\Users\Lab-G700\Desktop\ENG_ServerSide_2024-2025\SQLDBDemo\SQLDBDemo\obj\Debug\SQLDBDemo.Properties.Resources.resources
+C:\Users\Lab-G700\Desktop\ENG_ServerSide_2024-2025\SQLDBDemo\SQLDBDemo\obj\Debug\SQLDBDemo.csproj.GenerateResource.cache
+C:\Users\Lab-G700\Desktop\ENG_ServerSide_2024-2025\SQLDBDemo\SQLDBDemo\obj\Debug\SQLDBDemo.csproj.CoreCompileInputs.cache
+C:\Users\Lab-G700\Desktop\ENG_ServerSide_2024-2025\SQLDBDemo\SQLDBDemo\obj\Debug\SQLDBDemo.exe
+C:\Users\Lab-G700\Desktop\ENG_ServerSide_2024-2025\SQLDBDemo\SQLDBDemo\obj\Debug\SQLDBDemo.pdb
