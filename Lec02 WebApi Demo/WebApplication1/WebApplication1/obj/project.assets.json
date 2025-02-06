@@ -453,11 +453,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lab-G700\\Desktop\\ENG_ServerSide_2024-2025\\Lec02 WebApi Demo\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "C:\\Users\\Lab-G700\\Desktop\\year2 react course\\ENG_ServerSide_2024-2025\\Lec02 WebApi Demo\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
       "projectName": "WebApplication1",
-      "projectPath": "C:\\Users\\Lab-G700\\Desktop\\ENG_ServerSide_2024-2025\\Lec02 WebApi Demo\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+      "projectPath": "C:\\Users\\Lab-G700\\Desktop\\year2 react course\\ENG_ServerSide_2024-2025\\Lec02 WebApi Demo\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
       "packagesPath": "C:\\Users\\Lab-G700\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lab-G700\\Desktop\\ENG_ServerSide_2024-2025\\Lec02 WebApi Demo\\WebApplication1\\WebApplication1\\obj\\",
+      "outputPath": "C:\\Users\\Lab-G700\\Desktop\\year2 react course\\ENG_ServerSide_2024-2025\\Lec02 WebApi Demo\\WebApplication1\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

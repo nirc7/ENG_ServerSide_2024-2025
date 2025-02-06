@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "phCYID42UwA=",
+  "dgSpecHash": "CT91NipHd9w=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lab-G700\\Desktop\\ENG_ServerSide_2024-2025\\Lec02 WebApi Demo\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+  "projectFilePath": "C:\\Users\\Lab-G700\\Desktop\\year2 react course\\ENG_ServerSide_2024-2025\\Lec02 WebApi Demo\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lab-G700\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\Lab-G700\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
