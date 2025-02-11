@@ -132,10 +132,7 @@ namespace WebApplication1.Controllers
                     return StatusCode(StatusCodes.Status500InternalServerError);
 
                 value.Id = DBServices.AddStudent(value);
-
-                value.Id = DBStudentsMock.studnets.Max(stu => stu.Id) + 1;
-                DBStudentsMock.studnets.Add(value);
-
+                                
                 //return Created();
                 //return StatusCode(StatusCodes.Status201Created, value.Id);
                 return CreatedAtAction(nameof(Get), new { id = value.Id }, value);
@@ -185,14 +182,18 @@ namespace WebApplication1.Controllers
                 if (value == null || id != value.Id)
                     return BadRequest();
 
-                Student stu2Update = DBStudentsMock.studnets.FirstOrDefault(stu => stu.Id == id);
+                Student stu2Update = DBServices.GetStudentById(id);
                 if (stu2Update == null)
                 {
                     return NotFound($"student with id = {id} was not found in the Update by Id action!");
                 }
-                stu2Update.Name = value.Name;
-                stu2Update.Grade = value.Grade;
-                return NoContent();
+
+                int res =  DBServices.UpdateStudent(value);
+
+                if (res == 1)
+                    return NoContent();
+                else
+                    return BadRequest(res);
             }
             catch (Exception e)
             {
@@ -211,13 +212,18 @@ namespace WebApplication1.Controllers
                 if (id == 0)
                     return BadRequest();
 
-                Student stu2Del = DBStudentsMock.studnets.FirstOrDefault(stu => stu.Id == id);
+                Student stu2Del = DBServices.GetStudentById(id);
                 if (stu2Del == null)
                 {
                     return NotFound($"student with id = {id} was not found in the Delete by Id action!");
                 }
-                DBStudentsMock.studnets.Remove(stu2Del);
-                return NoContent();
+
+                int res = DBServices.DeleteStudent(id);
+
+                if (res == 1)
+                    return NoContent();
+                else
+                    return BadRequest(res);
             }
             catch (Exception e)
             {

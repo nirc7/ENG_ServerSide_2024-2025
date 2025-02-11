@@ -14,6 +14,8 @@ namespace WebApplication1
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddCors(p=> p.AddPolicy("corspolicy", build=>build.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -27,6 +29,7 @@ namespace WebApplication1
 
             app.UseAuthorization();
 
+            app.UseCors("corspolicy");
 
             app.MapControllers();
 
