@@ -48,7 +48,6 @@ namespace SQLDBDemo
             }
 
             con.Close();
-            lblTable.Text = "ERROR in NIR.JSX";
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -86,6 +85,12 @@ namespace SQLDBDemo
             ExcNonQ(
                 " DELETE TBUsers" +
                 " WHERE Id = " + txtId.Text);
+        }
+
+        private void btn_SP_DS_Click(object sender, EventArgs e)
+        {
+            Form2 frm2 = new Form2();
+            frm2.ShowDialog();
         }
     }
 }

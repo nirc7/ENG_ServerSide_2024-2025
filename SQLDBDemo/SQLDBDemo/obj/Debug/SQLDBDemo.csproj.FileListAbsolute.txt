@@ -18,3 +18,4 @@ C:\Users\Lab-G700\Desktop\ENG_ServerSide_2024-2025\SQLDBDemo\SQLDBDemo\obj\Debug
 C:\Users\Lab-G700\Desktop\ENG_ServerSide_2024-2025\SQLDBDemo\SQLDBDemo\obj\Debug\SQLDBDemo.csproj.CoreCompileInputs.cache
 C:\Users\Lab-G700\Desktop\ENG_ServerSide_2024-2025\SQLDBDemo\SQLDBDemo\obj\Debug\SQLDBDemo.exe
 C:\Users\Lab-G700\Desktop\ENG_ServerSide_2024-2025\SQLDBDemo\SQLDBDemo\obj\Debug\SQLDBDemo.pdb
+C:\Users\Lab-G700\Desktop\ENG_ServerSide_2024-2025\SQLDBDemo\SQLDBDemo\obj\Debug\SQLDBDemo.Form2.resources

@@ -39,6 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btn_SP_DS = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -137,11 +138,22 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // btn_SP_DS
+            // 
+            this.btn_SP_DS.Location = new System.Drawing.Point(60, 12);
+            this.btn_SP_DS.Name = "btn_SP_DS";
+            this.btn_SP_DS.Size = new System.Drawing.Size(198, 23);
+            this.btn_SP_DS.TabIndex = 11;
+            this.btn_SP_DS.Text = "Go2 PAge With SP AND DS Demo";
+            this.btn_SP_DS.UseVisualStyleBackColor = true;
+            this.btn_SP_DS.Click += new System.EventHandler(this.btn_SP_DS_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(575, 273);
+            this.Controls.Add(this.btn_SP_DS);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.label3);
@@ -174,6 +186,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btn_SP_DS;
     }
 }
 
