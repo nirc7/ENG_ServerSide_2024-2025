@@ -18,6 +18,7 @@ namespace SQLDBDemo
         DataSet ds;
         DataTable dt;
         SqlDataAdapter adptr;
+        SqlCommand cmd;
 
         public Form2()
         {
@@ -39,6 +40,7 @@ namespace SQLDBDemo
             adptr = new SqlDataAdapter(
                             " SELECT * " +
                             " FROM TBUsers", con);
+            ds.Tables.Clear();
             adptr.Fill(ds, "T1");
             dt = ds.Tables["T1"];
             dataGridView1.DataSource = dt;
@@ -82,6 +84,55 @@ namespace SQLDBDemo
         {
             new SqlCommandBuilder(adptr);
             adptr.Update(dt);
+        }
+
+        private void btnSelectFWSP_Click(object sender, EventArgs e)
+        {
+            cmd = new SqlCommand("SearchUser", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            SqlParameter parId = new SqlParameter("@MyID", txtId.Text);
+            parId.Direction = ParameterDirection.Input;
+            cmd.Parameters.Add(parId);
+
+            SqlParameter parF = new SqlParameter("@FamilyName",SqlDbType.NVarChar, 20);
+            parF.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(parF);
+
+            SqlParameter parRet = new SqlParameter();
+            parRet.Direction = ParameterDirection.ReturnValue;
+            cmd.Parameters.Add(parRet);
+
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            if ((int)parRet.Value == 0)
+            {
+                MessageBox.Show(parF.Value.ToString());
+            }
+            else
+                MessageBox.Show(":(" + (int)parRet.Value);
+        }
+
+        private void btnTableWSP_Click(object sender, EventArgs e)
+        {
+            cmd = new SqlCommand("SearchUserTable", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            //opt1
+            cmd.Parameters.Add(new SqlParameter("@MyID", txtId.Text));
+
+            //opt2
+            //SqlParameter parId = new SqlParameter("@MyID", txtId.Text);
+            //parId.Direction = ParameterDirection.Input;
+            //cmd.Parameters.Add(parId);
+
+            SqlDataAdapter adptr2 = new SqlDataAdapter(cmd);
+
+            ds.Tables.Clear();
+            adptr2.Fill(ds, "T2");
+            dataGridView1.DataSource = ds.Tables["T2"]; 
         }
     }
 }

@@ -40,6 +40,7 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btn_SP_DS = new System.Windows.Forms.Button();
+            this.btnUpdateWP = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -148,11 +149,22 @@
             this.btn_SP_DS.UseVisualStyleBackColor = true;
             this.btn_SP_DS.Click += new System.EventHandler(this.btn_SP_DS_Click);
             // 
+            // btnUpdateWP
+            // 
+            this.btnUpdateWP.Location = new System.Drawing.Point(268, 12);
+            this.btnUpdateWP.Name = "btnUpdateWP";
+            this.btnUpdateWP.Size = new System.Drawing.Size(132, 23);
+            this.btnUpdateWP.TabIndex = 12;
+            this.btnUpdateWP.Text = "UPDATE With Param";
+            this.btnUpdateWP.UseVisualStyleBackColor = true;
+            this.btnUpdateWP.Click += new System.EventHandler(this.btnUpdateWP_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(575, 273);
+            this.Controls.Add(this.btnUpdateWP);
             this.Controls.Add(this.btn_SP_DS);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
@@ -187,6 +199,7 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btn_SP_DS;
+        private System.Windows.Forms.Button btnUpdateWP;
     }
 }
 

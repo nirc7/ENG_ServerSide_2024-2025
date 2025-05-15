@@ -13,11 +13,23 @@ namespace SQLDBDemo
 {
     public partial class Form1 : Form
     {
+        string conStr = "Data Source=LAB-G700;Initial Catalog=DBUsers;User ID=sa;Password=RuppinTech!;";
+        SqlConnection con;
+        SqlCommand cmd;
+
         public Form1()
         {
             InitializeComponent();
-        }
 
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            con = new SqlConnection(conStr);
+            cmd = new SqlCommand();
+            cmd.Connection  = con;
+
+            RefreshTable();
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             ExcNonQ(
@@ -34,11 +46,11 @@ namespace SQLDBDemo
         private void RefreshTable()
         {
             lblTable.Text = "";
-            string conStr = "Data Source=LAB-G700;Initial Catalog=DBUsers;User ID=sa;Password=RuppinTech!;";
-            SqlConnection con = new SqlConnection(conStr);
-            SqlCommand cmd = new SqlCommand(
+            
+            cmd.CommandText = 
                 " SELECT *  " +
-                " FROM  TBUsers ", con);
+                " FROM  TBUsers ";
+
             con.Open();
             SqlDataReader reader = cmd.ExecuteReader();
 
@@ -50,10 +62,7 @@ namespace SQLDBDemo
             con.Close();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            RefreshTable();
-        }
+
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -64,17 +73,14 @@ namespace SQLDBDemo
 
         private void ExcNonQ(string comm)
         {
-            string conStr = "Data Source=LAB-G700;Initial Catalog=DBUsers;User ID=sa;Password=RuppinTech!;";
-            SqlConnection con = new SqlConnection(conStr);
-            SqlCommand cmd = new SqlCommand(comm, con);
-
+            cmd.CommandText = comm;
             con.Open();
             int res = cmd.ExecuteNonQuery();
             con.Close();
 
             if (res != 1)
             {
-                MessageBox.Show( "Error in " + comm.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)[0] + " !");
+                MessageBox.Show("Error in " + comm.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)[0] + " !");
             }
             else
                 RefreshTable();
@@ -91,6 +97,26 @@ namespace SQLDBDemo
         {
             Form2 frm2 = new Form2();
             frm2.ShowDialog();
+        }
+
+        private void btnUpdateWP_Click(object sender, EventArgs e)
+        {
+            cmd.CommandText = $" UPDATE TBUsers " +
+                $" SET Name=@parName, Family=@parFamily" +
+                $" WHERE Id=@parId";
+
+            SqlParameter parN = new SqlParameter("@parName",txtName.Text);
+
+
+            cmd.Parameters.Add(parN);
+            cmd.Parameters.Add(new SqlParameter("@parFamily", txtFamily.Text));
+            cmd.Parameters.Add(new SqlParameter("@parId", txtId.Text));
+
+            cmd.Connection.Open();
+            int res = cmd.ExecuteNonQuery();
+            cmd.Connection.Close();
+
+            MessageBox.Show(res.ToString());
         }
     }
 }

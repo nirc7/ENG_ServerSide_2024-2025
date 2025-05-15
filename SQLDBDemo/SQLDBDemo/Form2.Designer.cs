@@ -40,6 +40,8 @@
             this.txtId = new System.Windows.Forms.TextBox();
             this.btnInsert = new System.Windows.Forms.Button();
             this.btnUpdateSql = new System.Windows.Forms.Button();
+            this.btnSelectFWSP = new System.Windows.Forms.Button();
+            this.btnTableWSP = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,7 +144,7 @@
             // 
             // btnUpdateSql
             // 
-            this.btnUpdateSql.Location = new System.Drawing.Point(130, 239);
+            this.btnUpdateSql.Location = new System.Drawing.Point(121, 239);
             this.btnUpdateSql.Name = "btnUpdateSql";
             this.btnUpdateSql.Size = new System.Drawing.Size(117, 23);
             this.btnUpdateSql.TabIndex = 20;
@@ -150,11 +152,33 @@
             this.btnUpdateSql.UseVisualStyleBackColor = true;
             this.btnUpdateSql.Click += new System.EventHandler(this.btnUpdateSql_Click);
             // 
+            // btnSelectFWSP
+            // 
+            this.btnSelectFWSP.Location = new System.Drawing.Point(121, 277);
+            this.btnSelectFWSP.Name = "btnSelectFWSP";
+            this.btnSelectFWSP.Size = new System.Drawing.Size(117, 23);
+            this.btnSelectFWSP.TabIndex = 21;
+            this.btnSelectFWSP.Text = "Select Family W SP";
+            this.btnSelectFWSP.UseVisualStyleBackColor = true;
+            this.btnSelectFWSP.Click += new System.EventHandler(this.btnSelectFWSP_Click);
+            // 
+            // btnTableWSP
+            // 
+            this.btnTableWSP.Location = new System.Drawing.Point(253, 277);
+            this.btnTableWSP.Name = "btnTableWSP";
+            this.btnTableWSP.Size = new System.Drawing.Size(117, 23);
+            this.btnTableWSP.TabIndex = 22;
+            this.btnTableWSP.Text = "Select Table W SP";
+            this.btnTableWSP.UseVisualStyleBackColor = true;
+            this.btnTableWSP.Click += new System.EventHandler(this.btnTableWSP_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(621, 340);
+            this.Controls.Add(this.btnTableWSP);
+            this.Controls.Add(this.btnSelectFWSP);
             this.Controls.Add(this.btnUpdateSql);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
@@ -190,5 +214,7 @@
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.Button btnUpdateSql;
+        private System.Windows.Forms.Button btnSelectFWSP;
+        private System.Windows.Forms.Button btnTableWSP;
     }
 }
